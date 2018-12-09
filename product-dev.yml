@@ -10,6 +10,11 @@ server:
 #https://blog.csdn.net/zhaoyachao123/article/details/78413467
 #https://www.jianshu.com/p/8f21bbcd79f5
 spring:
+  rabbitmq:
+      host: 192.168.199.182
+      port: 5672
+      username: guest
+      password: guest
   application:
       name: product
   datasource:
