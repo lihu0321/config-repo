@@ -1,0 +1,58 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  #instance:
+    #hostname: clientName
+
+server:
+  port: 8081
+#https://blog.csdn.net/zhaoyachao123/article/details/78413467
+#https://www.jianshu.com/p/8f21bbcd79f5
+spring:
+  application:
+      name: product
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: 'jdbc:mysql://127.0.0.1:3306/springcloud_sell?serverTimezone=GMT%2B8&useSSL=false&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false'
+      username: root
+      password: 123456
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      max-wait: 60000
+      validation-query: SELECT 1
+      test-while-idle: false
+      test-on-borrow: true
+      test-on-return: false
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      max-open-prepared-statements: 20
+      validation-query-timeout: 30000
+      filters: stat,wall.slf4j
+      stat-view-servlet:
+        enabled: false
+      web-stat-filter:
+        enabled: false
+      filter:
+        slf4j:
+          statement-executable-sql-log-enable: true
+          enabled: true
+  #jackson:
+    #date-format: yyyy-MM-dd HH:mm:ss
+    #ime-zone: GMT+8
+    #https://orchidflower.oschina.io/2018/06/22/Handling-Bigint-using-Jackson-in-Springboot/
+    #generator:
+          #write_numbers_as_strings: true
+
+
+
+#\u6570\u636E\u5E93\u8868\u5217\uFF1Auser_name \u5B9E\u4F53\u7C7B\u5C5E\u6027\uFF1AuserName \u6620\u5C04\u4E0D\u5BF9\u5E94
+#\u5728Springboot\u4E2D\uFF0C\u53EF\u4EE5\u901A\u8FC7\u8BBE\u7F6Emap-underscore-to-camel-case\u5C5E\u6027\u4E3Atrue\u6765\u5F00\u542F\u9A7C\u5CF0\u529F\u80FD\uFF0C\u5BF9\u5E94\u6620\u5C04
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+
