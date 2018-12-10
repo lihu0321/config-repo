@@ -12,4 +12,4 @@ zuul:
 #    product: /myProduct/**
   #排除某些路由
   ignored-patterns:
-    - /**/product/totalPrice 
+    - /**/product/info/totalPrice 
