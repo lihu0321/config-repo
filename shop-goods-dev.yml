@@ -60,5 +60,7 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+  mapper-locations:
+    - classpath*:com/imooc/shop/goods/core/dao/*.xml
 
 
