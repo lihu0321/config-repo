@@ -59,6 +59,8 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+  mapper-locations:
+    - classpath*:com/imooc/shop/order/core/dao/*.xml
 env:
   dev
 
@@ -68,13 +70,6 @@ management:
       exposure:
         include: "*"
 
-#数据库表列：user_name 实体类属性：userName 映射不对应
-#在Springboot中，可以通过设置map-underscore-to-camel-case属性为true来开启驼峰功能，对应映射
-mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
-  mapper-locations:
-    - classpath*:com/imooc/shop/order/core/dao/*.xml
 
 girl:
   name: zhangsan
