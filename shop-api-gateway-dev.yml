@@ -7,7 +7,7 @@ zuul:
   # /myProduct/product/list -> /product/product/list
     myProduct:
       path: /myProduct/**
-      serviceId: product
+      serviceId: shop-product
   #简洁写法
 #    product: /myProduct/**
   #排除某些路由
