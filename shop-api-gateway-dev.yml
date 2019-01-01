@@ -13,3 +13,7 @@ zuul:
   #排除某些路由
   ignored-patterns:
     - /**/product/info/totalPrice 
+spring:
+  redis:
+    host: 192.168.199.182
+    port: 6379
